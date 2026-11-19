@@ -1,0 +1,18 @@
+{
+  "name": "jobtrail",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JobTrail - Job Application Tracker (React + Node.js + Express + MongoDB)",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n api,web -c green,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "seed": "npm run seed --prefix server",
+    "seed:reset": "npm run seed:reset --prefix server",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
